@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\UsahaJenisController;
 use App\Http\Controllers\Admin\UsahaProdukController;
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\Admin\LaporanController;
 
 // Authentication Routes
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('loginForm');
@@ -113,6 +114,9 @@ Route::middleware(['role:admin'])->group(function () {
     Route::get('admin/usaha-produk/edit/{id}', [UsahaProdukController::class, 'edit'])->name('admin.usaha_produk-edit');
     Route::put('admin/usaha-produk/update/{id}', [UsahaProdukController::class, 'update'])->name('admin.usaha_produk-update');
     Route::delete('admin/usaha-produk/destroy/{id}', [UsahaProdukController::class, 'destroy'])->name('admin.usaha_produk-destroy');
+
+    // Laporan Penjualan
+    Route::get('admin/laporan', [LaporanController::class, 'index'])->name('admin.laporan-index');
 });
 
 

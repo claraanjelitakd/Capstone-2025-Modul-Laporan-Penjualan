@@ -475,7 +475,12 @@ return [
             'url' => 'admin/usaha-produk',
             'icon' => 'fas fa-briefcase', // ikon untuk usaha/pekerjaan
         ],
-
+        [
+            'text' => 'Laporan Penjualan',
+            'url' => 'admin/laporan',
+            'icon' => 'fas fa-file-alt', // ikon untuk laporan/dokumen
+        ],
+        
     ],
 
     /*
